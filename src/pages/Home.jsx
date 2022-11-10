@@ -24,7 +24,7 @@ export default function Home() {
           </p>
           </div>
           <ExploreBtn />
-        </section>
+        </section> 
         {/* Hero Content */}
 
         

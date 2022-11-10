@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-bg': "url('/src/assets/home-bg.png')",
-        'home-bg-mobile': "url('/src/assets/home-bg-mobile.png')",
-        'home-bg-tablet': "url('/src/assets/home-bg-tablet.png')",
+        'home-bg': "url('/src/assets/home/background-home-desktop.jpg')",
+        'home-bg-mobile': "url('/src/assets/home/background-home-mobile.jpg')",
+        'home-bg-tablet': "url('/src/assets/home/background-home-tablet.jpg')",
       },
       colors: {
         secondary: '#D0D6F9',

@@ -72,12 +72,12 @@ li::before {
 
 #mobile-menu[data-visible='true'] {
     transform: translateX(0%);
-    transition: all 200ms ease-in;
+    transition: all 300ms ease-in;
 }
 
 #mobile-menu {
     transform: translateX(100%);
-    transition: all 200ms ease-in;
+    transition: all 300ms ease-in;
 }
 
 /* .open {

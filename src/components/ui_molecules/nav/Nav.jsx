@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import Logo from "../../../assets/logo.svg";
 
 export default function Nav() {
@@ -42,22 +43,35 @@ export default function Nav() {
           data-visible="false"
           className=" text-base text-white tracking-wide pl-8 uppercase space-y-8 z-10 h-screen bg-[rgb(255,255,255)]/10 backdrop-blur-md absolute w-4/6 top-0 bottom-0 right-0 md:hidden"
         >
+
+          <Link to='/'>
           <p className="mt-28">
             {" "}
             <span className="font-bold mr-2.5 lg:inline">00</span> Home
           </p>
+          </Link>
+
+          <Link to='/desination'>
           <p>
             {" "}
             <span className="font-bold mr-2.5 lg:inline">00</span> Destination
           </p>
+          </Link>
+
+          <Link to='/crew'>
           <p>
             {" "}
             <span className="font-bold mr-2.5 lg:inline">00</span> Crew
           </p>
+          </Link>
+
+          <Link to='/technology'>
           <p>
             {" "}
             <span className="font-bold mr-2.5 lg:inline">00</span> Technology
           </p>
+          </Link>
+
         </section>
         {/* mobile-menu */}
 
@@ -67,24 +81,36 @@ export default function Nav() {
             id="nav-items"
             className="flex box-border text-white tracking-wide"
           >
+            <Link to='/'>
             <li className="mr-9 cursor-pointer">
               {" "}
               <span className="font-bold hidden mr-2.5 lg:inline">00</span> Home
             </li>
+            </Link>
+
+            <Link to='/destination'>
             <li className="mr-9 cursor-pointer">
               {" "}
               <span className="font-bold hidden mr-2.5 lg:inline">01</span>{" "}
               Destination
             </li>
+            </Link>
+
+            <Link to='/crew'>
             <li className="mr-9 cursor-pointer">
               {" "}
               <span className="font-bold hidden mr-2.5 lg:inline">03</span> Crew
             </li>
+            </Link>
+
+            <Link to='/technology'>
             <li id="last-link" className="cursor-pointer">
               {" "}
               <span className="font-bold hidden mr-2.5 lg:inline">04</span>{" "}
               Technology
             </li>
+            </Link>
+            
           </ul>
         </div>
       </nav>
