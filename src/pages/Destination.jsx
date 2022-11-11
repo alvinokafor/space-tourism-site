@@ -9,12 +9,11 @@ import DestinationInfo from "../components/ui_molecules/DestinationInfo";
 import { destinations } from "../data.json";
 
 export default function Destination({ currentPath }) {
+  const [destination] = useState(destinations);
+  const [destinationIndex, setDestinationIndex] = useState(0);
 
-  const [destination] = useState(destinations)
-  const [destinationIndex, setDestinationIndex] = useState(0)
-
-  const {name, images, description, distance, travel} = destination[destinationIndex]
-
+  const { name, images, description, distance, travel } =
+    destination[destinationIndex];
 
   return (
     <main className=" bg-destination-bg-mobile md:bg-destination-bg-tablet bg-no-repeat h-full lg:bg-destination-bg bg-cover bg-center overflow-hidden">
@@ -26,12 +25,16 @@ export default function Destination({ currentPath }) {
           </h2>
 
           <div className="lg:flex lg:items-center">
-            <DestinationImg image={images}/>
+            <DestinationImg image={images} />
             <div className="lg:w-2/4 lg:flex lg:flex-col lg:justify-end">
-              <DestinationTabs setDestinationIndex={setDestinationIndex} destination={destination} destinationIndex={destinationIndex}/>
-              <PlanetName name={name}/>
-              <BodyText description={description}/>
-              <DestinationInfo distance={distance} travel={travel}/>
+              <DestinationTabs
+                setDestinationIndex={setDestinationIndex}
+                destination={destination}
+                destinationIndex={destinationIndex}
+              />
+              <PlanetName name={name} />
+              <BodyText description={description} />
+              <DestinationInfo distance={distance} travel={travel} />
             </div>
           </div>
         </div>

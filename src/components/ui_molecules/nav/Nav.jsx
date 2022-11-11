@@ -52,21 +52,21 @@ export default function Nav({ currentPath }) {
           <Link to="/destination">
             <p className="mb-8">
               {" "}
-              <span className="font-bold mr-2.5 lg:inline">00</span> Destination
+              <span className="font-bold mr-2.5 lg:inline">01</span> Destination
             </p>
           </Link>
 
           <Link to="/crew">
             <p className="mb-8">
               {" "}
-              <span className="font-bold mr-2.5 lg:inline">00</span> Crew
+              <span className="font-bold mr-2.5 lg:inline">02</span> Crew
             </p>
           </Link>
 
           <Link to="/technology">
             <p>
               {" "}
-              <span className="font-bold mr-2.5 lg:inline">00</span> Technology
+              <span className="font-bold mr-2.5 lg:inline">03</span> Technology
             </p>
           </Link>
         </section>
