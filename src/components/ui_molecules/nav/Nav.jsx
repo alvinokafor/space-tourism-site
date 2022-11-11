@@ -1,8 +1,7 @@
-import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Logo from "../../../assets/logo.svg";
 
-export default function Nav() {
+export default function Nav({ currentPath }) {
   const menuHandler = () => {
     const menu = document.getElementById("mobile-menu");
 
@@ -20,7 +19,7 @@ export default function Nav() {
 
   return (
     <section>
-      <nav className="flex justify-between items-center">
+      <nav className="flex justify-between items-center font-subHeading">
         <img
           src={Logo}
           alt="Space Tourism Logo"
@@ -41,37 +40,35 @@ export default function Nav() {
         <section
           id="mobile-menu"
           data-visible="false"
-          className=" text-base text-white tracking-wide pl-8 uppercase space-y-8 z-10 h-screen bg-[rgb(255,255,255)]/10 backdrop-blur-md absolute w-4/6 top-0 bottom-0 right-0 md:hidden"
+          className=" text-base text-white tracking-wide pl-8 uppercase space-y-8 z-10 h-screen bg-[rgb(255,255,255)]/10 backdrop-blur-md fixed w-4/6 top-0 bottom-0 right-0 md:hidden"
         >
-
-          <Link to='/'>
-          <p className="mt-28">
-            {" "}
-            <span className="font-bold mr-2.5 lg:inline">00</span> Home
-          </p>
+          <Link to="/">
+            <p className="mt-28 mb-8">
+              {" "}
+              <span className="font-bold mr-2.5 lg:inline">00</span> Home
+            </p>
           </Link>
 
-          <Link to='/desination'>
-          <p>
-            {" "}
-            <span className="font-bold mr-2.5 lg:inline">00</span> Destination
-          </p>
+          <Link to="/destination">
+            <p className="mb-8">
+              {" "}
+              <span className="font-bold mr-2.5 lg:inline">00</span> Destination
+            </p>
           </Link>
 
-          <Link to='/crew'>
-          <p>
-            {" "}
-            <span className="font-bold mr-2.5 lg:inline">00</span> Crew
-          </p>
+          <Link to="/crew">
+            <p className="mb-8">
+              {" "}
+              <span className="font-bold mr-2.5 lg:inline">00</span> Crew
+            </p>
           </Link>
 
-          <Link to='/technology'>
-          <p>
-            {" "}
-            <span className="font-bold mr-2.5 lg:inline">00</span> Technology
-          </p>
+          <Link to="/technology">
+            <p>
+              {" "}
+              <span className="font-bold mr-2.5 lg:inline">00</span> Technology
+            </p>
           </Link>
-
         </section>
         {/* mobile-menu */}
 
@@ -79,38 +76,70 @@ export default function Nav() {
         <div className="hidden box-border bg-[rgb(255,255,255)]/10 relative top-0 -right-6 py-10 px-12 backdrop-blur uppercase text-sm md:block lg:static lg:-mr-14 lg:py-8 lg:px-28">
           <ul
             id="nav-items"
-            className="flex box-border text-white tracking-wide"
+            className="flex box-border text-white tracking-wide space-x-9"
           >
-            <Link to='/'>
-            <li className="mr-9 cursor-pointer">
-              {" "}
-              <span className="font-bold hidden mr-2.5 lg:inline">00</span> Home
-            </li>
+            <Link to="/" className="relative">
+              <li
+                className={
+                  currentPath === ""
+                    ? "cursor-pointer before:absolute before:h-[2px] before:bg-white before:w-full  before:-bottom-8 before:content-['']"
+                    : " before:absolute before:h-[2px] before:bg-white before:w-full  before:-bottom-8 before:content-[''] before:scale-x-0 hover:before:scale-x-100 hover:before:transition-all hover:before:duration-300 cursor-pointer"
+                }
+              >
+                {" "}
+                <span className="font-bold hidden mr-2.5 lg:inline">00</span>
+                Home
+              </li>
             </Link>
 
-            <Link to='/destination'>
-            <li className="mr-9 cursor-pointer">
-              {" "}
-              <span className="font-bold hidden mr-2.5 lg:inline">01</span>{" "}
-              Destination
-            </li>
+            <Link to="/destination" className="relative">
+              <li
+                className={
+                  currentPath === "destination"
+                    ? "cursor-pointer before:absolute before:h-[2px] before:bg-white before:w-full before:-bottom-8 before:content-['']"
+                    : "before:absolute before:h-[2px] before:bg-white before:w-full  before:-bottom-8 before:content-[''] before:scale-x-0 hover:before:scale-x-100 hover:before:transition-all hover:before:duration-300 cursor-pointer"
+                }
+              >
+                {" "}
+                <span className="font-bold hidden mr-2.5 lg:inline">
+                  01
+                </span>{" "}
+                Destination
+              </li>
             </Link>
 
-            <Link to='/crew'>
-            <li className="mr-9 cursor-pointer">
-              {" "}
-              <span className="font-bold hidden mr-2.5 lg:inline">03</span> Crew
-            </li>
+            <Link to="/crew" className="relative">
+              <li
+                className={
+                  currentPath === "crew"
+                    ? "cursor-pointer before:absolute before:h-[2px] before:bg-white before:w-full before:-bottom-8 before:content-['']"
+                    : "before:absolute before:h-[2px] before:bg-white before:w-full  before:-bottom-8 before:content-[''] before:scale-x-0 hover:before:scale-x-100 hover:before:transition-all hover:before:duration-300 cursor-pointer"
+                }
+              >
+                {" "}
+                <span className="font-bold hidden mr-2.5 lg:inline">
+                  03
+                </span>{" "}
+                Crew
+              </li>
             </Link>
 
-            <Link to='/technology'>
-            <li id="last-link" className="cursor-pointer">
-              {" "}
-              <span className="font-bold hidden mr-2.5 lg:inline">04</span>{" "}
-              Technology
-            </li>
+            <Link to="/technology" className="relative">
+              <li
+                id="last-link"
+                className={
+                  currentPath === "technology"
+                    ? "cursor-pointer before:absolute before:h-[2px] before:bg-white before:w-full before:-bottom-8 before:content-['']"
+                    : "before:absolute before:h-[2px] before:bg-white before:w-full  before:-bottom-8 before:content-[''] before:scale-x-0 hover:before:scale-x-100 hover:before:transition-all hover:before:duration-300 cursor-pointer"
+                }
+              >
+                {" "}
+                <span className="font-bold hidden mr-2.5 lg:inline">
+                  04
+                </span>{" "}
+                Technology
+              </li>
             </Link>
-            
           </ul>
         </div>
       </nav>

@@ -2,82 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    overflow: hidden;
-}
 
-
-li:last-of-type::before {
-    width: 112px;
+/* li:nth-of-type(4)::before {
+  width: 112px;
 }
 
 li:nth-of-type(2)::before {
-    width: 111px;
+  width: 111px;
 }
 
 li::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 70px;
-    height: 2px;
-    background: #fff;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 250ms ease-in;
-}
- li:hover::before {
-    transform: scaleX(1);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 250ms ease-in;
+} */
+
+.currentTab::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(1);
+  transform-origin: center;
 }
 
+/* li:hover::before {
+  transform: scaleX(1);
+} */
+
 .hamburger {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    transition: all 0.25s ease-in;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s ease-in;
 }
 
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    top: 0;
-    left: 0;
-    background: D0D6F9;
-    transform: rotate(0);
-    transition: all 0.5s;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #d0d6f9;
+  transform: rotate(0);
+  transition: all 0.5s;
 }
 
 .hamburger-middle {
-    transform: translateY(8px);
+  transform: translateY(8px);
 }
 
 .hamburger-bottom {
-    transform: translateY(16px);
+  transform: translateY(16px);
 }
 
 .open .hamburger-top {
-    transform: rotate(45deg) translateY(6px) translateX(6px);
+  transform: rotate(45deg) translateY(6px) translateX(6px);
 }
 
 .open .hamburger-bottom {
-    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
 .open .hamburger-middle {
-    display: none;
+  display: none;
 }
 
-#mobile-menu[data-visible='true'] {
-    transform: translateX(0%);
-    transition: all 300ms ease-in;
+#mobile-menu[data-visible="true"] {
+  transform: translateX(0%);
+  transition: all 300ms ease-in;
 }
 
 #mobile-menu {
-    transform: translateX(100%);
-    transition: all 300ms ease-in;
+  transform: translateX(100%);
+  transition: all 300ms ease-in;
 }
 
 /* .open {

@@ -1,7 +1,12 @@
-import React from 'react'
+import ContentWrapper from "../components/ContentWrapper";
+import Nav from "../components/ui_molecules/nav/Nav";
 
-export default function Technology() {
+export default function Technology({ currentPath }) {
   return (
-    <div>Technology</div>
+    <main className="bg-technology-bg-mobile md:bg-technology-bg-tablet bg-no-repeat lg:bg-technology-bg h-screen bg-cover bg-center overflow-hidden">
+      <ContentWrapper>
+        <Nav currentPath={currentPath}/>
+      </ContentWrapper>
+    </main>
   )
 }
