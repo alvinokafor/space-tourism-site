@@ -43,28 +43,28 @@ export default function Nav({ currentPath }) {
           className=" text-base text-white tracking-wide pl-8 uppercase space-y-8 z-10 h-screen bg-[rgb(255,255,255)]/10 backdrop-blur-md fixed w-4/6 top-0 bottom-0 right-0 md:hidden"
         >
           <Link to="/">
-            <p className="mt-28 mb-8">
+            <p className={ currentPath === "" ? "mt-28 mb-8 border-r-4" : "mt-28 mb-8"}>
               {" "}
               <span className="font-bold mr-2.5 lg:inline">00</span> Home
             </p>
           </Link>
 
           <Link to="/destination">
-            <p className="mb-8">
+            <p className={ currentPath === "destination" ? "mb-8 border-r-4" : "mb-8"}>
               {" "}
               <span className="font-bold mr-2.5 lg:inline">01</span> Destination
             </p>
           </Link>
 
           <Link to="/crew">
-            <p className="mb-8">
+            <p className={ currentPath === "crew" ? "mb-8 border-r-4" : "mb-8"}>
               {" "}
               <span className="font-bold mr-2.5 lg:inline">02</span> Crew
             </p>
           </Link>
 
           <Link to="/technology">
-            <p>
+            <p className={ currentPath === "technology" ? "border-r-4" : ""}>
               {" "}
               <span className="font-bold mr-2.5 lg:inline">03</span> Technology
             </p>

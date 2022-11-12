@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "../components/ui_molecules/nav/Nav";
 import ContentWrapper from "../components/ContentWrapper";
 import ExploreBtn from "../components/ui_atoms/ExploreBtn";
@@ -23,7 +24,10 @@ export default function Home({ currentPath }) {
             world experience!
           </p>
           </div>
+          <Link to='/destination'>
           <ExploreBtn />
+          </Link>
+          
         </section> 
         {/* Hero Content */}
 

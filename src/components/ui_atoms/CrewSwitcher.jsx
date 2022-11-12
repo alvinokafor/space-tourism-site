@@ -10,8 +10,8 @@ export default function CrewSwitcher({ setCrewIndex, crewIndex, crewMates }) {
           onClick={() => setCrewIndex(index)}
           className={
             crewIndex === index
-              ? "w-[12px] h-[12px] bg-white rounded-full cursor-pointer"
-              : "w-[12px] h-[12px] bg-divider rounded-full cursor-pointer"
+              ? "w-[12px] h-[12px] bg-white rounded-full cursor-pointer hover:border hover:border-white transition-all duration-200 ease-in"
+              : "w-[12px] h-[12px] bg-divider rounded-full cursor-pointer hover:border hover:border-white transition-all duration-200 ease-in"
           }
         ></span>
       ))}

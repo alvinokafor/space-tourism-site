@@ -11,8 +11,8 @@ export default function DestinationTabs({
         <p
           className={
             destinationIndex === index
-              ? "cursor-pointer border-b-2 pb-2"
-              : "cursor-pointer"
+              ? "cursor-pointer border-b-2 pb-2 transition-all duration-150 ease-in"
+              : "cursor-pointer text-slate-500 border-b-2 pb-2 border-transparent transition-all duration-150 ease-in"
           }
           key={planet.name}
           onClick={() => setDestinationIndex(index)}

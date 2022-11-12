@@ -24,7 +24,7 @@ export default function Destination({ currentPath }) {
             <span className="text-secondary mr-4">01</span>Pick your Destination
           </h2>
 
-          <div className="lg:flex lg:items-center">
+          <div className="lg:flex lg:items-center lg:mb-10">
             <DestinationImg image={images} />
             <div className="lg:w-2/4 lg:flex lg:flex-col lg:justify-end">
               <DestinationTabs

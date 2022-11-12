@@ -25,6 +25,12 @@ module.exports = {
           "url('/src/assets/technology/background-technology-mobile.jpg')",
         "technology-bg-tablet":
           "url('/src/assets/technology/background-technology-tablet.jpg')",
+          "spaceport-mobile": "url('/assets/technology/image-spaceport-landscape.jpg')",
+          "spaceport-desktop": "url('/assets/technology/image-spaceport-portrait.jpg')",
+          "launch-mobile": "url('/assets/technology/image-launch-vehicle-landscape.jpg')",
+          "launch-desktop": "url('/assets/technology/image-launch-vehicle-portrait.jpg')",
+          "capsule-mobile": "url('/assets/technology/image-space-capsule-landscape.jpg')",
+          "capsule-desktop": "url('/assets/technology/image-space-capsule-portrait.jpg')",
       },
       colors: {
         secondary: "#D0D6F9",
