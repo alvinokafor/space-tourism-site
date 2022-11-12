@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
 
-export default function TechnologyImg({image}) {
+export default function TechnologyImg({ image }) {
+
   return (
-    <div className={`mt-8 w-full h-[170px] md:h-[310px] bg-${image.landscape} bg-center bg-cover lg:bg-${image.portrait} lg:bg-cover lg:w-[515px] lg:h-[527px]`}></div>
-  )
+    <div className="mt-8 w-full h-[170px] md:h-[310px] lg:bg-cover object-cover lg:w-[515px] lg:h-[527px]">
+      <img
+        className="w-full h-full object-center object-cover lg:hidden"
+        src={image.landscape}
+        alt="Technology Image"
+      />
+        <img
+        className="w-full h-full object-center object-cover hidden lg:block"
+        src={image.portrait}
+        alt="Technology Image"
+      />
+    </div>
+  );
 }
